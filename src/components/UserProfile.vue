@@ -23,7 +23,7 @@
       </button>
     </nav>
 
-    <form class="search-bar-container">
+    <form @keydown.enter.prevent="searchQuery" class="search-bar-container">
       <input
         type="text"
         class="search-bar"
@@ -114,6 +114,8 @@ const starredList = () => {
   showStarred.value = true;
   showRepos.value = false;
 };
+
+const searchQuery = () => searchedRepos.value
 </script>
 
 <style></style>
