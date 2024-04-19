@@ -1,0 +1,273 @@
+.container {
+    box-sizing: border-box;
+    display: grid;
+    grid: 100px / auto auto auto;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1280px;
+}
+
+.profile-info {
+    margin-top: 20px;
+    margin-left: 80px;
+    display: grid;
+    grid-column-end: 1;
+    width: 296px;
+    align-items: baseline;
+}
+
+.profile-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.tabs-container {
+    display: flex;
+    // flex-wrap: wrap;
+    margin: 20px;
+    height: 50px;
+    align-items: flex-start;
+    gap: 75px;
+    grid-column: 1 / span 5;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 18px;
+    color: #5c646d;
+}
+
+.tab-button-left,
+.tab-button-right {
+    // padding: 5px 50px;
+    background-color: initial;
+    color: #5c646d;
+    font-size: 0.975rem;
+    font-weight: normal;
+    border: none;
+    // padding: 0 0.5rem;
+    position: relative;
+    text-align: center;
+    line-height: 30px;
+    width: 20%;
+    cursor: pointer;
+}
+.active {
+    border-bottom: 5px solid #e36209;
+}
+
+.divider {
+    display: flex;
+    border-top: 1px solid #e3e3e3;
+    width: 100%;
+}
+
+.quantity {
+    background-color: #e3e3e3;
+    // color: hsl(212, 8%, 39%);
+    margin-left: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 45%;
+}
+
+p {
+    color: #999999;
+}
+
+.repos_detail {
+    // display:inline;
+    padding-right: 10px;
+    line-height: 1px;
+    font-size: 12px;
+
+    color: #586069;
+    // justify-content: space-evenly;
+}
+
+.search-bar-container {
+    display: grid;
+    grid-column: 1;
+    margin-left: 20px;
+    min-width: 620px;
+}
+
+.search-bar {
+    border: 1px solid #e3e3e3;
+    background-color: #ffffff;
+    line-height: 30px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    background-image: url("search.png");
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
+.tab-content {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-inline-start: 1em;
+    margin-inline-end: 0;
+    padding-inline-start: 40px;
+    color: #488cd4;
+}
+
+.tab-content__list {
+    display: flex;
+    padding: 14px 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+h3 {
+    font-size: 20px;
+    font-size: 600;
+}
+
+p {
+    line-height: 0px;
+    font-size: 13px;
+}
+
+h5 {
+    line-height: 50px;
+}
+
+.username {
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+}
+
+.button-group {
+    margin-bottom: 20px;
+}
+
+.info {
+    margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tab-content {
+        order: 1;
+    }
+
+    .search-bar-container {
+        flex-wrap: wrap;
+    }
+
+    .search-bar {
+        max-width: 400px;
+    }
+
+    .tabs-container {
+        width: 100%;
+    }
+
+    .tab-button {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 760px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .container > .tabs-container {
+        flex-direction: row;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .tabs-container > .tab-button {
+        max-width: auto;
+        display: flex;
+        flex-basis: 200px;
+        flex: 100%;
+    }
+
+    .tab-button-left,
+    .tab-button-right {
+        flex: 100%;
+        text-align: center;
+        background-color: initial;
+        border: none;
+        cursor: pointer;
+    }
+
+    .active {
+        width: 600px;
+        border-bottom: 5px solid #e36209;
+    }
+    .search-bar-container,
+    .search-bar {
+        max-width: 50%;
+    }
+    .tab-content__list {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .profile-info {
+        margin-top: 20px;
+
+        display: flex;
+        flex-direction: 1;
+
+        align-self: flex-start;
+    }
+
+    .profile-photo {
+        margin-right: 10px;
+    }
+
+    .username {
+        font-weight: bold;
+        align-self: center;
+    }
+
+    .profile-info > .description {
+        color: #666;
+        align-self: flex-end;
+        top: 10px;
+    }
+}
+
+
+///RESCREVER O CSS COM A METODOLOGIA BEM 
+/// .container {
+
+   
+    // &__profile-info {
+
+    
+    //     &__photo {
+    
+    //     }
+
+    //     &__username {
+
+    //     }
+
+    //     &__description {
+  
+    //     }
+    // }
